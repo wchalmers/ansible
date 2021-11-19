@@ -1,0 +1,10 @@
+# yum-update.yaml
+---
+
+  - hosts: webservers:loadbalancers
+    become: true # This determines if task will be ran as root
+    tasks:
+      - name: Update yum packages
+        yum: # This and the two lines below updates every package to latest version
+          name: "*"
+          state: latest 

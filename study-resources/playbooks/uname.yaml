@@ -1,0 +1,6 @@
+# uname.yaml
+---
+  - Hosts: webservers:loadbalancers
+    Tasks:
+      - Name: Get OS type
+        Shell: uname

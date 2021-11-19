@@ -1,0 +1,12 @@
+# hosts-dev
+
+[webservers]
+app1 ansible_host=18.133.167.39 # This gives this IP Address an alias of app1
+app2 ansible_host=3.11.193.115
+app3 ansible_host=12.166.45.2:5309 # This specifys to use the port 5309
+
+[loadbalancers]
+18.135.160.93 # This is just a normal host wiht no alias
+
+[local]
+control ansible_connection=local # This tells Ansible that this host is itself and not to run playbooks / SSH into it.

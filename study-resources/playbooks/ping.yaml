@@ -1,0 +1,6 @@
+# ping.yaml
+---
+  - hosts: all
+    tasks:
+      - name: Ping all sevrers
+        action: ping
