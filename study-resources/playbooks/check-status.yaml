@@ -6,3 +6,8 @@
     tasks:
       - name: Check status of Apache
         command: service httpd status
+        changed_when: false
+
+      - name: This will not fail
+        command: /bin/false # This command will always return a failed status
+        ignore_errors: yes # This will ignore the errors
